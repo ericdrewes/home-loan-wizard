@@ -17,188 +17,188 @@ const initialState = {
 	email: ''
 }
 
-const UPDATE_LOAN_TYPE = 'UPDATE_LOAN_TYPE'
-const UPDATE_PROPERTY_TYPE = 'UPDATE_PROPERTY_TYPE'
-const UPDATE_CITY = 'UPDATE_CITY'
-const UPDATE_PROP = 'UPDATE_PROP'
-const UPDATE_FOUND = 'UPDATE_FOUND'
-const UPDATE_AGENT = 'UPDATE_AGENT'
-const UPDATE_COST = 'UPDATE_COST'
-const UPDATE_DOWN_PAYMENT = 'UPDATE_DOWN_PAYMENT'
-const UPDATE_CREDIT = 'UPDATE_CREDIT'
-const UPDATE_HISTORY = 'UPDATE_HISTORY'
-const UPDATE_ADDRESS_1 = 'UPDATE_ADDRESS_1'
-const UPDATE_ADDRESS_2 = 'UPDATE_ADDRESS_2'
-const UPDATE_ADDRESS_3 = 'UPDATE_ADDRESS_3'
-const UPDATE_FIRST = 'UPDATE_FIRST'
-const UPDATE_LAST = 'UPDATE_LAST'
-const UPDATE_EMAIL = 'UPDATE_EMAIL'
+const UPDATE_LOAN_TYPE = "UPDATE_LOAN_TYPE";
+const UPDATE_PROPERTY_TYPE = 'UPDATE_PROPERTY_TYPE';
+const UPDATE_CITY = "UPDATE_CITY";
+const UPDATE_PROP = "UPDATE_PROP";
+const UPDATE_FOUND = "UPDATE_FOUND";
+const UPDATE_AGENT = "UPDATE_AGENT";
+const UPDATE_COST = 'UPDATE_COST';
+const UPDATE_DOWN_PAYMENT = 'UPDATE_DOWN_PAYMENT';
+const UPDATE_CREDIT = 'UPDATE_CREDIT';
+const UPDATE_HISTORY = 'UPDATE_HISTORY';
+const UPDATE_ADDRESS_1 = 'UPDATE_ADDRESS_1';
+const UPDATE_ADDRESS_2 = 'UPDATE_ADDRESS_2';
+const UPDATE_ADDRESS_3 = 'UPDATE_ADDRESS_3';
+const UPDATE_FIRST= 'UPDATE_FISRT';
+const UPDATE_LAST = 'UPDATE_LAST';
+const UPDATE_EMAIL = 'UPDATE_EMAIL';
 
-function reducer(state = initialState, action) {
-	switch (action.type) {
+function reducer( state = initialState, action ) { 
+    switch( action.type ){
 		case UPDATE_LOAN_TYPE:
-			return Object.assign({}, state, { loanType: action.payload })
+			return Object.assign( {}, state, { loanType: action.payload } );
 
 		case UPDATE_PROPERTY_TYPE:
-			return Object.assign({}, state, { propertyType: action.payload })
+			return Object.assign( {}, state, { propertyType: action.payload } );
 
 		case UPDATE_CITY:
-			return Object.assign({}, state, { city: action.payload })
+			return Object.assign( {}, state, {city: action.payload});
 
 		case UPDATE_PROP:
-			return Object.assign({}, state, { prop: action.payload })
-
-		case UPDATE_FOUND:
-			return Object.assign({}, state, { found: action.payload })
-
+			return Object.assign( {}, state, {prop: action.payload});
+		
+		case UPDATE_FOUND: 
+			return Object.assign({}, state, {found: action.payload});
+		
 		case UPDATE_AGENT:
-			return Object.assign({}, state, { agent: action.payload })
-
+			return Object.assign({}, state, {agent: action.payload});
+		
 		case UPDATE_COST:
-			return Object.assign({}, state, { cost: action.payload })
+			return Object.assign( {}, state, {cost: action.payload});
 
 		case UPDATE_DOWN_PAYMENT:
-			return Object.assign({}, state, { downPayment: action.payload })
+			return Object.assign({}, state, {downPayment: action.payload});
 
 		case UPDATE_CREDIT:
-			return Object.assign({}, state, { credit: action.payload })
+			return Object.assign({}, state, {credit: action.payload});
 
 		case UPDATE_HISTORY:
-			return Object.assign({}, state, { history: action.payload })
+			return Object.assign({}, state, {history: action.payload});
 
 		case UPDATE_ADDRESS_1:
-			return Object.assign({}, state, { addressOne: action.payload })
+			return Object.assign({}, state, {addressOne: action.payload});
 
 		case UPDATE_ADDRESS_2:
-			return Object.assign({}, state, { addressTwo: action.payload })
+			return Object.assign({}, state, {addressTwo: action.payload});
 
 		case UPDATE_ADDRESS_3:
-			return Object.assign({}, state, { addressThree: action.payload })
+			return Object.assign({}, state, {addressThree: action.payload});
 
 		case UPDATE_FIRST:
-			return Object.assign({}, state, { firstName: action.payload })
+			return Object.assign({}, state, {first: action.payload});
 
-		case UPDATE_LAST:
-			return Object.assign({}, state, { lastName: action.payload })
+		case UPDATE_LAST: 
+			return Object.assign({}, state, {last: action.payload});
 
 		case UPDATE_EMAIL:
-			return Object.assign({}, state, { email: action.payload })
+			return Object.assign({}, state, {email: action.payload});
 
-		default:
-			return state
+	  
+
+		default: return state;
 	}
 }
 
-export function updateLoanType(loanType) {
-	return {
+export function updateLoanType(loanType){
+	return{
 		type: UPDATE_LOAN_TYPE,
 		payload: loanType
-	}
+	};
 }
 
-export function updatePropertyType(propertyType) {
-	return {
+export function updatePropertyType(propertyType){
+	return{
 		type: UPDATE_PROPERTY_TYPE,
 		payload: propertyType
-	}
+	};
 }
 
-export function updateCity(city) {
-	return {
+export function updateCity(city){
+	return{
 		type: UPDATE_CITY,
 		payload: city
-	}
+	};
 }
 
-export function updateProp(prop) {
-	return {
+export function updateProp(prop){
+	return{
 		type: UPDATE_PROP,
 		payload: prop
-	}
+	};
 }
 
-export function updateFound(found) {
-	return {
+export function updateFound(found){
+	return{
 		type: UPDATE_FOUND,
 		payload: found
-	}
+	};
 }
 
-export function updateAgent(agent) {
-	return {
+export function updateAgent(agent){
+	return{
 		type: UPDATE_AGENT,
 		payload: agent
-	}
+	};
 }
 
-export function updateCost(cost) {
-	return {
+export function updateCost(cost){
+	return{
 		type: UPDATE_COST,
 		payload: cost
-	}
+	};
 }
 
-export function updateDownPayment(payment) {
-	return {
+export function updateDownPayment(Payment){
+	return{
 		type: UPDATE_DOWN_PAYMENT,
-		payload: payment
-	}
+		payload: Payment
+	};
 }
 
-export function updateCredit(credit) {
-	return {
+export function updateCredit(credit){
+	return{
 		type: UPDATE_CREDIT,
 		payload: credit
-	}
+	};
 }
 
-export function updateHistory(history) {
-	return {
+export function updateHistory(history){
+	return{
 		type: UPDATE_HISTORY,
 		payload: history
-	}
+	};
 }
 
-export function updateAddress1(address) {
-	return {
+export function updateAddress1(address){
+	return{
 		type: UPDATE_ADDRESS_1,
 		payload: address
-	}
+	};
 }
 
-export function updateAddress2(address) {
-	return {
+export function updateAddress2(address){
+	return{
 		type: UPDATE_ADDRESS_2,
 		payload: address
-	}
+	};
 }
 
-export function updateAddress3(address) {
-	return {
+export function updateAddress3(address){
+	return{
 		type: UPDATE_ADDRESS_3,
 		payload: address
-	}
+	};
 }
 
-export function updateFirst(first) {
-	return {
+export function updateFirst(first){
+	return{
 		type: UPDATE_FIRST,
 		payload: first
-	}
+	};
 }
 
-export function updateLast(last) {
-	return {
+export function updateLast(last){
+	return{
 		type: UPDATE_LAST,
 		payload: last
-	}
+	};
 }
 
-export function updateEmail(email) {
-	return {
+export function updateEmail(email){
+	return{
 		type: UPDATE_EMAIL,
 		payload: email
-	}
+	};
 }
-
-export default reducer
+export default reducer;
